@@ -11,6 +11,6 @@ while running:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN:
             circ = Planet(src, pygame.mouse.get_pos())
-            print(circ.PlanetMass)
+            print(event.type)
     pygame.display.flip()
     

@@ -8,10 +8,10 @@ class Planet:
         self.PlanetMass = self.PlanetSize * 5
 
         #Planet drawing
-        pygame.draw.circle(Surface, RedGreenBlue[random.randint(0,2)], position, self.PlanetSize, width=self.PlanetSize)
+        planet = pygame.draw.circle(Surface, RedGreenBlue[random.randint(0,2)], position, self.PlanetSize, width=self.PlanetSize)
 
         #gravity drawing
-        pygame.draw.circle(Surface, (255,255,255), position, self.PlanetSize+(self.PlanetSize*2), width=1)
+        gravity = pygame.draw.circle(Surface, (255,255,255), position, self.PlanetSize+(self.PlanetSize*2), width=1)
     
     def getMass(self):
         return self.PlanetMass
