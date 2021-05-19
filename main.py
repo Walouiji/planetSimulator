@@ -2,7 +2,7 @@ from Planet import Planet
 import pygame
 
 running = True
-
+planets = []
 src = pygame.display.set_mode((500, 500))
 while running:
     pygame.init()
@@ -10,7 +10,9 @@ while running:
         if event.type == pygame.QUIT:
             running = False
         if event.type == pygame.MOUSEBUTTONDOWN:
-            circ = Planet(src, pygame.mouse.get_pos())
-            print(event.type)
+            planets.append(Planet(src, pygame.mouse.get_pos()))
+    for planet in planets:
+        planet.planet.x += 100
+        print(planet.planet.x)
     pygame.display.flip()
     
